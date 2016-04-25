@@ -1,3 +1,7 @@
+# OSX generated files
+*.DS_Store
+*.localized
+
 # Logs
 logs
 *.log
