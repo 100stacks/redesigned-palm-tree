@@ -1,0 +1,34 @@
+{
+    "name": "SHIFTLOCK",
+    "version": "1.0.0",
+    "description": "A MEAN app used to show fullstack usage",
+    "main": "server.js",
+    "scripts": {
+        "tests": "echo \"Error: no tests specified\" && exit 1",
+        "start": "node server.js" 
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/100stacks/shift-lock.git"
+    },
+    "keywords": [
+        "Angular",
+        "Express",
+        "Heroku",
+        "MEAN",
+        "MongoDB",
+        "Mongoose",
+        "Node",
+    ],
+    "author": "100stacks",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/100stacks/shift-lock/issues"
+    },
+    "homepage": "https://github.com/100stacks/shift-lock",
+    "dependencies": {
+        "body-parser": "^1.13.3",
+        "express": "^4.13.3",
+        "mongodb": "^2.0.43"
+    }
+}
