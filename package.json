@@ -1,0 +1,6 @@
+{
+	"name": "SHIFTLOCK",
+	"version": "1.0.0",
+	"description": "A MEAN app used to show the full stack example",
+	"main": "server.js",
+}
