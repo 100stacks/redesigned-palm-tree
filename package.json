@@ -25,7 +25,7 @@
     "bugs": {
         "url": "https://github.com/100stacks/shift-lock/issues"
     },
-    "homepage": "https://github.com/100stacks/shift-lock",
+    "homepage": "https://github.com/100stacks",
     "dependencies": {
         "body-parser": "^1.13.3",
         "express": "^4.13.3",
