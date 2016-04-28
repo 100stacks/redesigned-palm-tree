@@ -1,6 +1,6 @@
 {
     "name": "SHIFTLOCK",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "A MEAN app used to show fullstack usage",
     "main": "server.js",
     "scripts": {
