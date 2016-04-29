@@ -23,7 +23,7 @@ mongodb.MongoClient.connect(process.env.MONGOLAB_URI, function (err, database) {
         process.exit(1);
     }
 
-    // Save db object from the database connection callback for reuse
+    // Save to global db object from the database connection callback for reuse
     db = database;
     console.log('Database connection ready...');
 
