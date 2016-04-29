@@ -79,4 +79,45 @@ app.post('/contacts', function (request, response) {
     });
 });
 
+/*
+ * Route - /contacts/:id
+ *
+ * GET: find contact by ID
+ * PUT: update contact by ID
+ * DELETE: deletes contact by ID
+ */
+app.get('/contacts/:id', function (request, response) {
+    db.collection(CONTACTS_COLLECTION).findOne({ _id: new ObjectID(request.params.id) },
+        function (error, mongodoc) {
+            if (error) {
+                errorHandler(response, error.message, 'Failed to get contact.');
+            } else {
+                response.status(200).json(mongodoc);
+            }
+        });
+});
 
+app.put('/contacts/:id', function (request, response) {
+    var updateDoc = request.body;
+    delete update._id;
+
+    db.collection(CONTACTS_COLLECTION).updateOne( { _id: new ObjectID(request.params.id) }, updateDoc,
+        function (error, mongodoc) {
+            if (error) {
+                errorHandler(response, error.message, 'Failed to update contact.');
+            } else {
+                response.status(204).end()
+            }
+        }
+    );
+});
+
+app.delete('/contacts/:id', function (request, response) {
+    db.collection(CONTACTS_COLLECTION).deleteOne({ _id: new ObjectID(request.params.id)}, function(error, result) {
+        if (error) {
+            errorHandler(response, error.message, 'Failed to delete contact.');
+        } else {
+            response.status(204).end();
+        }
+    });
+});
