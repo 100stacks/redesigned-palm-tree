@@ -46,4 +46,37 @@ function errorHandler(err, request, response, next) {// 'next' is an Express fun
 
 app.use(errorHandler); 
 
+/*
+ * Route - /contacts
+ *
+ * GET: finds all contacts
+ * POST: creates a new contact
+ */
+app.get('/contacts', function (request, response) {
+    db.collection(CONTACTS_COLLECTION).find({}).toArray(function (error, mongodocs) {
+        if (error) {
+            errorHandler(response, error.message, 'Failed to get contacts.');
+        } else {
+            response.status(200).json(mongodocs);
+        }
+    });
+});
+
+app.post('/contacts', function (request, response) {
+    var newContact = request.body;
+    newContact.createDate = new Date();
+
+    if (!(request.body.firstName || request.body.lastName)) {
+        errorHandler(response, 'Invalid user input', 'Must provide a first or last name.', 400);
+    }
+
+    db.collection(CONTACTS_COLLECTION).insertOne(newContact, function (error, mongodocs) {
+        if (error) {
+            errorHandler(response, error.mesage, 'Failed to create a new contact.');
+        } else {
+            response.status(201).json(mongodocs.ops[0]);
+        }
+    });
+});
+
 
