@@ -20,6 +20,13 @@ angular.module('contactsApp', ['ngRoute'])
         controller: 'NewContactController',
         templateUrl: 'contact-form.html'
     })
+    .when('contact/:contactId', {
+        controller: 'EditContactController',
+        templateUrl: 'contact.html'
+    })
+    .otherwise({
+        redirectTo: '/'
+    })
     .service('Contacts', function($http) {
         this.getContacts = function() {
             return $http.get('/contacts').
