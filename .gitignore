@@ -2,6 +2,9 @@
 *.DS_Store
 *.localized
 
+# IGNORE Environment Variables
+*.env
+
 # Logs
 logs
 *.log
