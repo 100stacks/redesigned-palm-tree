@@ -16,6 +16,10 @@ angular.module('contactsApp', ['ngRoute'])
             }
         })
     }
+    .when('new/contact', {
+        controller: 'NewContactController',
+        templateUrl: 'contact-form.html'
+    })
     .service('Contacts', function($http) {
         this.getContacts = function() {
             return $http.get('/contacts').
