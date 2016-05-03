@@ -37,4 +37,14 @@ angular.module('contactsApp')
                     console.log(response);
                 });
         }
+        this.deleteContact = function (contactId) {
+            var url = '/contacts/' + contactId;
+            return $http.delete(url).
+                then(function (response) {
+                    return response;
+                }, function (response) {
+                    alert('Error deleting this contact.');
+                    console.log(response);
+                });
+        }
     });
