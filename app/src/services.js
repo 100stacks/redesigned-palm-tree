@@ -1,5 +1,35 @@
 angular.module('contactsApp')
-
+/*
+ * @name services.js
+ * @description
+ * Contains the Angular client-side/front-end wrapper to
+ * our Express back-end API endpoints provided by server.js
+ *
+ * ## client-side/front-end routing
+ * ```js
+ * this.getContacts = function () {
+ *  return $http.get('/contacts').
+ *      then(function (response) {
+ *           return response;
+ *       }, function (response) {
+ *           alert('Error retrieving contacts.');
+ *       });
+ * }
+ * ```
+ *
+ * ## server-side/back-end routing
+ * ```js
+ * app.get('/contacts', function (request, response) {
+ *   db.collection(CONTACTS_COLLECTION).find({}).toArray(function (error, mongodocs) {
+ *       if (error) {
+ *           errorHandler(response, error.message, 'Failed to get contacts.');
+ *       } else {
+ *           response.status(200).json(mongodocs);
+ *       }
+ *   });
+ * });
+ * ```
+ */
     .service('Contacts', function ($http) {
         this.getContacts = function () {
             return $http.get('/contacts').
