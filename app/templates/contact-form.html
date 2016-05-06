@@ -13,5 +13,29 @@
       <label>Last Name (required)</label>
       <input id="last-name" class="form-control" type="text" ng-model="contact.lastName" required />
     </p>
+    <p>
+      <label>Email (required)</label>
+      <input id="email" class="form-control" type="email" ng-model="contact.email" required />
+    </p>
+    <p>
+      <label>Phone (Mobile)</label>
+      <input id="mobile" class="form-control" type="text" ng-model="contact.phone.mobile" required />
+    </p>
+    <p>
+      <label>Phone (Work)</label>
+      <input id="work-number" class="form-control" type="text" ng-model="contact.phone.work">
+    </p>
+    <p>
+      <label>Address</label>
+      <input id="address" class="form-control" type="text" ng-model="contact.address" />
+    </p>
+    <p>
+      <label>Twitter Handle</label>
+      <input id="twitter" class="form-control" type="text" ng-model="contact.twitter" />
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Save</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+    </p>
   </div>
 </div>
