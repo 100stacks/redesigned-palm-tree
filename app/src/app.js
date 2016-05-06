@@ -1,7 +1,7 @@
 /*
  * app.js
  *
- * Contains the angular logic for the app.
+ * Contains the angular route logic for the app.
  */ 
 angular.module('contactsApp', ['ngRoute'])
 
