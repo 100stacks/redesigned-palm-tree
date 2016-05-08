@@ -3,7 +3,7 @@
  *
  * Contains the angular route logic for the app.
  */ 
-angular.module('contactsApp', ['ngRoute'])
+angular.module('projectApp', ['ngRoute'])
 
     .config(function($routeProvider)) {
         $routeProvider

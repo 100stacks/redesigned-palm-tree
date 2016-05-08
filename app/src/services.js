@@ -1,4 +1,4 @@
-angular.module('contactsApp')
+angular.module('projectApp')
 /*
  * @name services.js
  * @description

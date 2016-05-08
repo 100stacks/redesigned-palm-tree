@@ -1,4 +1,4 @@
-angular.module('contactsApp')
+angular.module('projectApp')
 
     .controller('ListController', function(contacts, $scope) {
         $scope.contacts = contacts.data;
