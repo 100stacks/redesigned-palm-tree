@@ -5,6 +5,11 @@
  */ 
 angular.module('projectApp', ['ngRoute'])
 
+    // From medium.com/@hackstate tip to improve Angular performace...not really needed here more for documenting it.
+    .config(['$compileProvider', function ($compileProvider) {
+        $compileProvider.debugInfoEnabled(false);
+    }]);
+
     .config(function($routeProvider)) {
         $routeProvider
         .when('/', {
