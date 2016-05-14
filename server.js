@@ -72,7 +72,7 @@ app.post('/contacts', function (request, response) {
 
     db.collection(CONTACTS_COLLECTION).insertOne(newContact, function (error, mongodocs) {
         if (error) {
-            errorHandler(response, error.mesage, 'Failed to create a new contact.');
+            errorHandler(response, error.mesage, 'Failed to create a new contact information.');
         } else {
             response.status(201).json(mongodocs.ops[0]);
         }
@@ -90,7 +90,7 @@ app.get('/contacts/:id', function (request, response) {
     db.collection(CONTACTS_COLLECTION).findOne({ _id: new ObjectID(request.params.id) },
         function (error, mongodoc) {
             if (error) {
-                errorHandler(response, error.message, 'Failed to get contact.');
+                errorHandler(response, error.message, 'Failed to get contact information.');
             } else {
                 response.status(200).json(mongodoc);
             }
@@ -104,7 +104,7 @@ app.put('/contacts/:id', function (request, response) {
     db.collection(CONTACTS_COLLECTION).updateOne( { _id: new ObjectID(request.params.id) }, updateDoc,
         function (error, mongodoc) {
             if (error) {
-                errorHandler(response, error.message, 'Failed to update contact.');
+                errorHandler(response, error.message, 'Failed to update contact information.');
             } else {
                 response.status(204).end()
             }
