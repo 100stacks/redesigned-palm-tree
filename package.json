@@ -4,7 +4,7 @@
     "description": "A MEAN app used to show fullstack usage",
     "main": "server.js",
     "scripts": {
-        "tests": "echo \"Error: no tests specified\" && exit 1",
+        "test": "echo \"Error: no tests specified\" && exit 1",
         "start": "node server.js" 
     },
     "repository": {
@@ -18,7 +18,7 @@
         "MEAN",
         "MongoDB",
         "Mongoose",
-        "Node",
+        "Node"
     ],
     "author": "100stacks",
     "license": "MIT",
