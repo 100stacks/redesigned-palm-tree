@@ -15,9 +15,10 @@ app.use(bodyParser.json());
 
 // Global db object that uses the MongoDB collection pool 
 var db;
+var dbConnectStr = process.env.MONGOLAB_URI;
 
 // Connect to db before starting the app server
-mongodb.MongoClient.connect(process.env.MONGOLAB_URI, function (err, database) {
+mongodb.MongoClient.connect(dbConnectStr, function (err, database) {
     if (err) {
         console.log(err);
         process.exit(1);
