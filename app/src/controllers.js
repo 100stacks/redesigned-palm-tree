@@ -1,5 +1,11 @@
 angular.module('projectApp')
 
+/**
+ *
+ * App Controller logic
+ *
+ */
+
     .controller('ListController', function(contacts, $scope) {
         $scope.contacts = contacts.data;
     })
