@@ -1,5 +1,5 @@
 angular.module('projectApp')
-/*
+/**
  * @name services.js
  * @description
  * Contains the Angular client-side/front-end wrapper to
