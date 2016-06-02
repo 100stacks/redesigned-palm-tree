@@ -4,6 +4,7 @@
 
 # IGNORE Environment Variables
 *.env
+*.sh
 
 # Logs
 logs
