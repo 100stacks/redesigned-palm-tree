@@ -6,6 +6,8 @@ angular.module('projectApp')
  * our Express back-end API endpoints provided by server.js
  *
  * ## client-side/front-end routing
+ * AngularJS routing table.
+ *
  * ```js
  * this.getContacts = function () {
  *  return $http.get('/contacts').
@@ -18,6 +20,8 @@ angular.module('projectApp')
  * ```
  *
  * ## server-side/back-end routing
+ * Express routing table.
+ *
  * ```js
  * app.get('/contacts', function (request, response) {
  *   db.collection(CONTACTS_COLLECTION).find({}).toArray(function (error, mongodocs) {
