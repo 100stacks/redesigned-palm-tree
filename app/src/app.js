@@ -1,7 +1,7 @@
 /*
  * app.js
  *
- * Contains the angular route logic for the app.
+ * Contains the AngularJS route logic for the app.
  */ 
 angular.module('projectApp', ['ngRoute'])
 
