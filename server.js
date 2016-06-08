@@ -1,5 +1,5 @@
 /*
- * Demo MEAN application using JWT authentication
+ * MEAN Stack application using JWT authentication
  */
 var express = require('express');
 var path = require('path');
